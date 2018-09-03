@@ -11,6 +11,13 @@
     <title>$Title$</title>
   </head>
   <body>
-  学习 Java Web 知识
+  学习 Java Web 知识<br>
+
+  现在时间是：<% out.println(new java.util.Date());%> <br>
+
+  <% for (int i =0; i< 3; i++){ out.println("<font size ='"+i+"'>"); %>
+  Java EE </font> <br>
+  <% } %>
+
   </body>
 </html>
