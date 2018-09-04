@@ -60,5 +60,9 @@
   <%--使用 include 编译指令导入页面--%>
   <%@include file="staticInclude.jsp"%> <br>
 
+  <form id="login" method="post" action="forward.jsp">
+    <input type="text" name="username" />
+    <input type="submit" value="登录"/>
+  </form>
   </body>
 </html>
