@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--Page指令的info属性--%>
+<%@ page info="this is a jsp page"%>
 <html>
   <head>
     <title>$Title$</title>
@@ -48,5 +50,8 @@
     </tr>
     <% } %>
   </table>
+
+  <%--输出 Info 信息--%>
+  <%= getServletInfo() %>
   </body>
 </html>
