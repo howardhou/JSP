@@ -27,12 +27,26 @@
   Java EE </font> <br>
   <% } %>
 
-  <%-- 访问 jsp 声明 --%>
+  <%-- 访问 jsp 声明： <%! 声明部分 %> --%>
   <% out.println(count++); %> <br>
   <% out.println(info()); %> <br>
 
-  <%-- jsp 输出表达式 --%>
+  <%-- jsp 输出表达式：<%= 表达式 %> --%>
   <%= count++ %> <br>
   <%= info() %>
+
+  <%-- JSP 脚本：<% 脚本 %> --%>
+  <table border="1" width="300px" bgcolor="#7fffd4">
+    <% for (int i=0; i< 5; i++){ %>
+    <tr>
+      <td>
+        循环值：
+      </td>
+      <td>
+        <%=i%>
+      </td>
+    </tr>
+    <% } %>
+  </table>
   </body>
 </html>
