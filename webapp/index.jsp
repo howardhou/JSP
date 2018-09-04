@@ -67,6 +67,10 @@
     <input type="submit" value="登录"/>
   </form>
 
+  <h3>使用 jsp:include 动作指令，动态引入一个JSP页面</h3>
+  <jsp:include page="forward-target.jsp">
+    <jsp:param name="age" value="27"/>
+  </jsp:include>
 
   </body>
 </html>
