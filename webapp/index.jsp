@@ -5,7 +5,7 @@
   Time: 23:15
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="error.jsp" %>
 <%--Page指令的info属性--%>
 <%@ page info="this is a jsp page"%>
 <html>
@@ -53,5 +53,9 @@
 
   <%--输出 Info 信息--%>
   <%= getServletInfo() %>
+
+  <%--异常代码--%>
+  <% int a = 5 / 0 ; %>
+  
   </body>
 </html>
