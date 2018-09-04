@@ -52,10 +52,13 @@
   </table>
 
   <%--输出 Info 信息--%>
-  <%= getServletInfo() %>
+  <%= getServletInfo() %> <br>
 
   <%--异常代码--%>
-  <% int a = 5 / 0 ; %>
-  
+  <%--<% int a = 5 / 0 ; %>--%>
+
+  <%--使用 include 编译指令导入页面--%>
+  <%@include file="staticInclude.jsp"%> <br>
+
   </body>
 </html>
