@@ -31,5 +31,8 @@
   <% out.println(count++); %> <br>
   <% out.println(info()); %> <br>
 
+  <%-- jsp 输出表达式 --%>
+  <%= count++ %> <br>
+  <%= info() %>
   </body>
 </html>
