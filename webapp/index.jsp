@@ -72,5 +72,19 @@
     <jsp:param name="age" value="27"/>
   </jsp:include>
 
+  <h3>使用 jsp:useBean 动作指令，初始化一个 Java 实例</h3>
+  <%--除了实例化 JavaBean 之外， 还会将实例放入 page 范围内--%>
+  <%--需要对 User.java 进行编译，才能对Web起作用: `javac User.java`--%>
+  <jsp:useBean id="user" class="com.rongzi.User" type="com.rongzi.User" scope="page" />
+  <jsp:setProperty name="user" property="name" value="Hou dongdong" />
+  <jsp:getProperty name="user" property="name" /> <br>
+
+  <h3>可以使用如下代码代替 jsp:useBean , jsp:setProperty , jsp:getProperty 动作指令</h3>
+  <% com.rongzi.User user2 = new com.rongzi.User();
+    user2.setName("howard hou");
+    //将 user2 放入到 page 范围中
+    pageContext.setAttribute("user2", user2);
+  %>
+  <%= user2.getName()%> <br>
   </body>
 </html>
