@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!--Web应用的配置参数，放在web.xml文件中的context-param元素中配置-->
+    <!--配置第一个参数-->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>houdongdong</param-value>
+    </context-param>
+    <!--配置第二个参数-->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
 </web-app>

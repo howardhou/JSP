@@ -16,5 +16,7 @@
 Age = <%= request.getParameter("age") %> <br>
 
 <%= request.getParameter("username") %> <br>
+
+获取application中存储的变量: <%= application.getAttribute("count")%> <br>
 </body>
 </html>

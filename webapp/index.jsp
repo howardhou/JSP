@@ -30,15 +30,15 @@
   Java EE </font> <br>
   <% } %>
 
-  <h3> 访问 jsp 声明： <\%! 声明部分 \%> </h3>
+  <h3> 访问 jsp 声明： <\%! 声明部分 %> </h3>
   <% out.println(count++); %> <br>
   <% out.println(info()); %> <br>
 
-  <h3> jsp 输出表达式：<\%= 表达式 \%> </h3>
+  <h3> jsp 输出表达式：<\%= 表达式 %> </h3>
   <%= count++ %> <br>
   <%= info() %> <br>
 
-  <h3> JSP 脚本：<\% 脚本 \%> </h3>
+  <h3> JSP 脚本：<\% 脚本 %> </h3>
   <table border="1" width="300px" bgcolor="#7fffd4">
     <% for (int i=0; i< 5; i++){ %>
     <tr>
@@ -58,7 +58,7 @@
   <h3>异常代码</h3>
   <%--<% int a = 5 / 0 ; %>--%>
 
-  <h3>使用 include 编译指令导入页面</h3>
+  <h3>使用 include 编译指令，静态引入页面</h3>
   <%@include file="staticInclude.jsp"%> <br>
 
   <h3>使用 jsp:forward 动作指令，实现页面转发</h3>
@@ -67,7 +67,7 @@
     <input type="submit" value="登录"/>
   </form>
 
-  <h3>使用 jsp:include 动作指令，动态引入一个JSP页面</h3>
+  <h3>使用 jsp:include 动作指令，动态引入JSP页面</h3>
   <jsp:include page="forward-target.jsp">
     <jsp:param name="age" value="27"/>
   </jsp:include>
@@ -86,5 +86,13 @@
     pageContext.setAttribute("user2", user2);
   %>
   <%= user2.getName()%> <br>
+
+  <h3>使用application内置对象，保存变量</h3>
+  <% application.setAttribute("count", count); %>
+
+  <h3>使用application内置对象，从配置中获取参数</h3>
+  User Name : <%= application.getInitParameter("username") %><br>
+  Password : <%= application.getInitParameter("password") %><br>
+
   </body>
 </html>
