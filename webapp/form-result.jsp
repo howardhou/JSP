@@ -16,7 +16,7 @@
 
 <%
   //  设置解码方式， 必须放在最前面，否则会无效 ： http://www.aichengxu.com/other/9234452.htm
-  request.setCharacterEncoding("utf-8");
+//  request.setCharacterEncoding("utf-8");
 
   // 获取所有请求头的名称
   Enumeration<String> headerNames = request.getHeaderNames();
