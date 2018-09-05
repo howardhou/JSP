@@ -13,7 +13,10 @@
 <body>
 
 <%--提醒用户系统出现异常--%>
-<b>系统出现异常</b>
+<b>系统出现异常</b> <br>
+
+异常类型：<%= exception.getClass() %><br>
+异常信息：<%= exception.getMessage() %><br>
 
 </body>
 </html>

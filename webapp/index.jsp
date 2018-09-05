@@ -56,7 +56,7 @@
   <%= getServletInfo() %> <br>
 
   <h3>异常代码</h3>
-  <%--<% int a = 5 / 0 ; %>--%>
+  <% int a = 5 / 0 ; %>
 
   <h3>使用 include 编译指令，静态引入页面</h3>
   <%@include file="staticInclude.jsp"%> <br>
@@ -93,6 +93,9 @@
   <h3>使用application内置对象，从配置中获取参数</h3>
   User Name : <%= application.getInitParameter("username") %><br>
   Password : <%= application.getInitParameter("password") %><br>
+
+  <h3>使用 config 内置对象，获取JSP页面的 servlet 名称</h3>
+  <%= config.getServletName() %>
 
   </body>
 </html>
