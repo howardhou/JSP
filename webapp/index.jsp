@@ -123,5 +123,14 @@
     out.println("application2 变量： "+ pageContext.getAttribute("application2",pageContext.APPLICATION_SCOPE) + "<br>");
   %>
 
+  <br><br>
+  <a href="/webapp/form.html">request 内置对象测试</a>
+
+  <h3>使用 response 内置对象，生成非字符响应</h3>
+  <img src="img.jsp"/>
+
+  <br><br>
+  <a href="/webapp/redirect.jsp">使用 response 内置对象, 重定向 </a>
+
   </body>
 </html>
