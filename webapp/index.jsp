@@ -56,7 +56,7 @@
   <%= getServletInfo() %> <br>
 
   <h3>异常代码</h3>
-  <% int a = 5 / 0 ; %>
+  <%--<% int a = 5 / 0 ; %>--%>
 
   <h3>使用 include 编译指令，静态引入页面</h3>
   <%@include file="staticInclude.jsp"%> <br>
@@ -96,6 +96,32 @@
 
   <h3>使用 config 内置对象，获取JSP页面的 servlet 名称</h3>
   <%= config.getServletName() %>
+
+  <h3>使用 pageContext 内置对象，获取和设置共享数据</h3>
+  <%
+    // 使用 pageContext 内置对象，设置page变量，存储在 默认的 page 范围内
+    pageContext.setAttribute("page", "hello");
+    // 使用 request 内置对象，设置 request 变量， 存储在 request 范围内
+    request.setAttribute("request","hello request");
+    // 使用 pageContext 内置对象，设置 request2 变量，存储在 默认的 request 范围内
+    pageContext.setAttribute("request2", "hello request 2", pageContext.REQUEST_SCOPE);
+    // 使用 session 内置对象，设置 session 变量， 存储在 session 范围内
+    session.setAttribute("session","hello session");
+    // 使用 pageContext 内置对象，设置 session2 变量，存储在 默认的 session 范围内
+    pageContext.setAttribute("session2", "hello session 2", pageContext.SESSION_SCOPE);
+    // 使用 application 内置对象，设置 application 变量， 存储在 application 范围内
+    application.setAttribute("application","hello application");
+    // 使用 pageContext 内置对象，设置 application2 变量，存储在 默认的 application 范围内
+    pageContext.setAttribute("application2", "hello application 2", pageContext.APPLICATION_SCOPE);
+    // 获取个范围内的变量
+    out.println("page 变量： "+ pageContext.getAttribute("page") + "<br>");
+    out.println("request 变量： "+ request.getAttribute("request") + "<br>");
+    out.println("request2 变量： "+ request.getAttribute("request2") + "<br>");
+    out.println("session 变量： "+ pageContext.getAttribute("session",pageContext.SESSION_SCOPE) + "<br>");
+    out.println("session2 变量： "+ pageContext.getAttribute("session2",pageContext.SESSION_SCOPE) + "<br>");
+    out.println("application 变量： "+ application.getAttribute("application") + "<br>");
+    out.println("application2 变量： "+ pageContext.getAttribute("application2",pageContext.APPLICATION_SCOPE) + "<br>");
+  %>
 
   </body>
 </html>
