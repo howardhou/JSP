@@ -15,7 +15,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 //import com.mysql.jdbc.Driver;
 
-@WebServlet(name = "conndb", urlPatterns = "/conndb", initParams ={
+/*
+@WebServlet(name = "connDbServlet", urlPatterns = "/conndb", initParams ={
         @WebInitParam(value = "com.mysql.jdbc.Driver",name = "driver"),
         @WebInitParam(value = "jdbc:mysql://localhost:3306/testdb", name = "url"),
         @WebInitParam(name = "username", value = "root"),
@@ -26,6 +27,7 @@ import java.sql.Statement;
 //        @WebInitParam(name = "password", value = "sa!@#456"),
 //        @WebInitParam(name = "sql", value = "SELECT * FROM products")
 })
+*/
 public class ConnDbServlet extends HttpServlet {
 
     @Override
@@ -37,13 +39,16 @@ public class ConnDbServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try {
+            // 3种获取配置参数的方法都是一样的
+            String driver = getInitParameter("driver");
+            String url = getInitParameter("url");
+
+            String username = this.getInitParameter("username");
+            String password = this.getInitParameter("password");
+
             ServletConfig config = getServletConfig();
-            String driver = config.getInitParameter("driver");
-            String url = config.getInitParameter("url");
-            String username = config.getInitParameter("username");
-            String password = config.getInitParameter("password");
             String sql_sentence = config.getInitParameter("sql");
-            
+
             Class.forName(driver);
 
             Connection connection = DriverManager.getConnection(url, username, password);

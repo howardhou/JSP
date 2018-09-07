@@ -19,4 +19,35 @@
         <servlet-class>com.rongzi.TimerServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    
+    <servlet>
+        <servlet-name>connDbServlet</servlet-name>
+        <servlet-class>com.rongzi.ConnDbServlet</servlet-class>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/testdb</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>123456</param-value>
+        </init-param>
+        <init-param>
+            <param-name>sql</param-name>
+            <param-value>SELECT * FROM user</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>connDbServlet</servlet-name>
+        <url-pattern>/conndb</url-pattern>
+    </servlet-mapping>
+
 </web-app>
