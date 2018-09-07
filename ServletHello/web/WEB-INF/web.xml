@@ -3,4 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+        <!--指定 Servlet 的 name, 相当于 @WebServlet 的 name 属性-->
+        <servlet-name>firstservlet2</servlet-name>
+        <servlet-class>com.rongzi.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>firstservlet2</servlet-name>
+        <!--指定 Servlet 映射的地址，相当于 @WebServlet 的 urlPatterns 属性-->
+        <url-pattern>/firstservlet</url-pattern>
+    </servlet-mapping>
 </web-app>
