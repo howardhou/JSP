@@ -13,4 +13,10 @@
         <!--指定 Servlet 映射的地址，相当于 @WebServlet 的 urlPatterns 属性-->
         <url-pattern>/firstservlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>timerservlet</servlet-name>
+        <servlet-class>com.rongzi.TimerServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
 </web-app>
