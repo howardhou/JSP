@@ -39,15 +39,22 @@ public class ConnDbServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         try {
-            // 3种获取配置参数的方法都是一样的
-            String driver = getInitParameter("driver");
-            String url = getInitParameter("url");
+            // 3种获取 Servlet 配置参数的方法都是一样的
+//            String driver = getInitParameter("driver");
+//            String url = getInitParameter("url");
+//
+//            String username = this.getInitParameter("username");
+//            String password = this.getInitParameter("password");
+//
+//            ServletConfig config = getServletConfig();
+//            String sql_sentence = config.getInitParameter("sql");
 
-            String username = this.getInitParameter("username");
-            String password = this.getInitParameter("password");
-
-            ServletConfig config = getServletConfig();
-            String sql_sentence = config.getInitParameter("sql");
+            // 获取 Application 范围内的配置参数 ： https://blog.csdn.net/yakson/article/details/9203231
+            String driver = getServletContext().getInitParameter("driver");
+            String url = getServletContext().getInitParameter("url");
+            String username = getServletContext().getInitParameter("username");
+            String password = getServletContext().getInitParameter("password");
+            String sql_sentence = getServletContext().getInitParameter("sql");
 
             Class.forName(driver);
 

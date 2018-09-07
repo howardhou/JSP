@@ -23,26 +23,26 @@
     <servlet>
         <servlet-name>connDbServlet</servlet-name>
         <servlet-class>com.rongzi.ConnDbServlet</servlet-class>
-        <init-param>
-            <param-name>driver</param-name>
-            <param-value>com.mysql.jdbc.Driver</param-value>
-        </init-param>
-        <init-param>
-            <param-name>url</param-name>
-            <param-value>jdbc:mysql://localhost:3306/testdb</param-value>
-        </init-param>
-        <init-param>
-            <param-name>username</param-name>
-            <param-value>root</param-value>
-        </init-param>
-        <init-param>
-            <param-name>password</param-name>
-            <param-value>123456</param-value>
-        </init-param>
-        <init-param>
-            <param-name>sql</param-name>
-            <param-value>SELECT * FROM user</param-value>
-        </init-param>
+        <!--<init-param>-->
+            <!--<param-name>driver</param-name>-->
+            <!--<param-value>com.mysql.jdbc.Driver</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>url</param-name>-->
+            <!--<param-value>jdbc:mysql://localhost:3306/testdb</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>username</param-name>-->
+            <!--<param-value>root</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>password</param-name>-->
+            <!--<param-value>123456</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>sql</param-name>-->
+            <!--<param-value>SELECT * FROM user</param-value>-->
+        <!--</init-param>-->
     </servlet>
 
     <servlet-mapping>
@@ -50,4 +50,24 @@
         <url-pattern>/conndb</url-pattern>
     </servlet-mapping>
 
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://10.40.3.16:3306/bugzilla</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>MYSQL</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>sa!@#456</param-value>
+    </context-param>
+    <context-param>
+        <param-name>sql</param-name>
+        <param-value>select * from products</param-value>
+    </context-param>
 </web-app>
