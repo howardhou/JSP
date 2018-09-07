@@ -132,5 +132,32 @@
   <br><br>
   <a href="/webapp/redirect.jsp">使用 response 内置对象, 重定向 </a>
 
+  <h3>使用 response 内置对象，向客户端写入 Cookie</h3>
+  <%
+    String name = application.getInitParameter("username");
+    Cookie cookie = new Cookie("username", name);
+    //设置过期时间
+    cookie.setMaxAge(24*3600);
+    response.addCookie(cookie);
+
+    //最好别存中文
+    Cookie cookie2 = new Cookie("cnname", java.net.URLEncoder.encode("侯冬冬"));
+    cookie2.setMaxAge(24*3600);
+    response.addCookie(cookie2);
+  %>
+
+  <h3>使用 request 内置对象，读取 Cookie</h3>
+  <%
+    Cookie[] cookies = request.getCookies();
+    for (Cookie c : cookies) {
+        if (c.getName().equals("cnname")){
+          out.println(c.getName() + " - " + java.net.URLDecoder.decode(c.getValue()) +"<br>");
+        }
+        else {
+          out.println(c.getName() + " - " + c.getValue() +"<br>");
+        }
+    }
+  %>
+
   </body>
 </html>
