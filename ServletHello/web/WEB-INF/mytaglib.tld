@@ -10,9 +10,40 @@
     <uri>http://www.rongzi.com/mytaglib</uri>
 
     <!-- Invoke 'Generate' action to add tags or functions -->
-<tag>
-    <name>helloWorld</name>
-    <tag-class>com.rongzi.tags.HelloTag</tag-class>
-    <body-content>empty</body-content>
-</tag>
+    <tag>
+        <name>helloWorld</name>
+        <tag-class>com.rongzi.tags.HelloTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <!--??????-->
+        <name>query</name>
+        <!--???????-->
+        <tag-class>com.rongzi.tags.QueryTag</tag-class>
+        <!--?????-->
+        <body-content>empty</body-content>
+        <!--??????-->
+        <attribute>
+            <name>driver</name>
+            <required>true</required>
+            <!--<fragment>true</fragment>-->
+        </attribute>
+        <attribute>
+            <name>url</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>username</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>password</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>sql</name>
+            <required>true</required>
+        </attribute>
+    </tag>
 </taglib>
