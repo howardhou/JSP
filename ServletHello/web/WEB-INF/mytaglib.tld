@@ -46,4 +46,18 @@
             <required>true</required>
         </attribute>
     </tag>
+    <tag>
+        <name>iterator</name>
+        <tag-class>com.rongzi.tags.IteratorTag</tag-class>
+        <!--????????JSP??, ????HTML??????-->
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>collection</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>item</name>
+            <required>true</required>
+        </attribute>
+    </tag>
 </taglib>
