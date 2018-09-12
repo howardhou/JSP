@@ -71,4 +71,11 @@
             <fragment>true</fragment>
         </attribute>
     </tag>
+    <tag>
+        <name>dynamic</name>
+        <tag-class>com.rongzi.tags.DynamicTag</tag-class>
+        <body-content>empty</body-content>
+        <!--????????-->
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
 </taglib>

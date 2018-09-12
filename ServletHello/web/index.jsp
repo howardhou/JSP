@@ -45,6 +45,10 @@
       ${pageContext.request.remoteAddr}
     </jsp:attribute>
   </mytag:fragment>
+
+  <h3>动态属性的标签: 标签的属性的个数是不确定的</h3>
+  <mytag:dynamic name="东方融资网" url="www.rongzi.com"/><br>
+  <mytag:dynamic 项目名="融助手" 工时="88.8" 负责人="厉运兴，樊俊坤" 上线时间="2018-09-12"/><br>
   </body>
 
 </html>
