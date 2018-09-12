@@ -60,4 +60,15 @@
             <required>true</required>
         </attribute>
     </tag>
+    <tag>
+        <name>fragment</name>
+        <tag-class>com.rongzi.tags.FragmentTag</tag-class>
+        <!--???????????-->
+        <body-content>empty</body-content>
+        <attribute>
+            <name>fragment</name>
+            <required>true</required>
+            <fragment>true</fragment>
+        </attribute>
+    </tag>
 </taglib>

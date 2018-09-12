@@ -38,6 +38,13 @@
     </mytag:iterator>
   </table>
 
+  <h3>以页面片段作为属性的标签</h3>
+  <mytag:fragment>
+    <jsp:attribute name="fragment">
+      <%--下面是动态的JSP页面片段--%>
+      ${pageContext.request.remoteAddr}
+    </jsp:attribute>
+  </mytag:fragment>
   </body>
 
 </html>
