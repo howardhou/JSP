@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "authority", urlPatterns = "/*",initParams = {
-        @WebInitParam(name = "encoding", value = "UTF-8"),
-        @WebInitParam(name = "loginPage", value = "/login.jsp"),
-        @WebInitParam(name = "login", value = "/login")
-})
+//@WebFilter(filterName = "authority", urlPatterns = "/*",initParams = {
+//        @WebInitParam(name = "encoding", value = "UTF-8"),
+//        @WebInitParam(name = "loginPage", value = "/login.jsp"),
+//        @WebInitParam(name = "login", value = "/login")
+//})
 public class AuthorityFilter implements Filter {
     //获取配置信息
     private FilterConfig config;

@@ -24,5 +24,6 @@
     密码： <input type="password" name="password" /> <br>
     <input type="submit" value="登录" /> <br>
 </form>
+<div> howard / 123456 </div>
 </body>
 </html>
