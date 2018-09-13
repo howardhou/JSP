@@ -19,12 +19,12 @@ public class TimerServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
 
-        System.out.println("call init method of TimerServlet");
+        System.out.println("s: call init method of TimerServlet");
 
         ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(new Date());
+                System.out.println("s: " + new Date());
             }
         };
 

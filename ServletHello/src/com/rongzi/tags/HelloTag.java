@@ -9,7 +9,7 @@ public class HelloTag extends SimpleTagSupport {
     @Override
     public void doTag() throws JspException, IOException {
 //        super.doTag();
-        System.out.println("htllo tag");
+        System.out.println("t: htllo tag");
         getJspContext().getOut().write("Hello World " + new Date());
     }
 }

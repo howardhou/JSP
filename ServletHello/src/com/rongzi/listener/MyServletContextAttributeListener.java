@@ -15,7 +15,7 @@ public class MyServletContextAttributeListener implements ServletContextAttribut
         String name = event.getName();
         Object value = event.getValue();
 
-        System.out.println(application + " 范围内添加了名为 " + name + " 值为 " +value + " 的属性");
+        System.out.println("l: "+ application + " 范围内添加了名为 " + name + " 值为 " +value + " 的属性");
     }
 
     // 当程序从 application 范围内移除属性时，触发该方法
@@ -27,7 +27,7 @@ public class MyServletContextAttributeListener implements ServletContextAttribut
         String name = event.getName();
         Object value = event.getValue();
 
-        System.out.println(application + " 范围内名为 " + name + " 值为 " +value + " 的属性被删除了");
+        System.out.println("l: "+ application + " 范围内名为 " + name + " 值为 " +value + " 的属性被删除了");
 
     }
 
@@ -39,6 +39,6 @@ public class MyServletContextAttributeListener implements ServletContextAttribut
         String name = event.getName();
         Object value = event.getValue();
 
-        System.out.println(application + " 范围内名为 " + name + " 值为 " +value + " 的属性被替换了");
+        System.out.println("l: "+ application + " 范围内名为 " + name + " 值为 " +value + " 的属性被替换了");
     }
 }

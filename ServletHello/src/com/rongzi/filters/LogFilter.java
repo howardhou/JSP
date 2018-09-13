@@ -32,9 +32,9 @@ public class LogFilter implements Filter {
         // 获取 ServletContext 对象，用于记录日志
         ServletContext context = this.config.getServletContext();
         long before = System.currentTimeMillis();
-        System.out.println("开始过滤...");
+        System.out.println("f: ...开始过滤...");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
-        System.out.println("Filter 已经截获到用户的请求地址：" + request.getServletPath());
+        System.out.println("f: Filter 已经截获到用户的请求地址：" + request.getServletPath());
 
         // Filter 只是链式处理，请求依然放行到目的地址
         // doFilter 执行之前 就是请求的预处理， 执行之后，就是后处理
@@ -43,7 +43,7 @@ public class LogFilter implements Filter {
 
         // -------------- 响应进行后处理 -------------
         long after = System.currentTimeMillis();
-        System.out.println("过滤结束");
-        System.out.println("请求被定位到" + request.getRequestURI() + " 所花的时间为： " + (after - before));
+        System.out.println("f: 请求被定位到" + request.getRequestURI() + " 所花的时间为： " + (after - before));
+        System.out.println("f: ...过滤结束....");
     }
 }

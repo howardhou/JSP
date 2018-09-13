@@ -22,16 +22,16 @@ public class GetDbConnListener implements ServletContextListener{
 
         try {
             Class.forName(driver);
-
+            DriverManager.setLoginTimeout(3);
             Connection connection = DriverManager.getConnection(url, username, password);
 
             application.setAttribute("connection", connection);
 
-            System.out.println("success to contextInitialized to init mysql connection...");
+            System.out.println("l: success to contextInitialized to init mysql connection...");
 
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Listener 中获取数据库连接出现" + e.getMessage());
+            System.out.println("l: Listener 中获取数据库连接出现" + e.getMessage());
         }
     }
 
@@ -41,7 +41,7 @@ public class GetDbConnListener implements ServletContextListener{
         ServletContext application = sce.getServletContext();
         Connection connection = (Connection) application.getAttribute("connection");
 
-        System.out.println("success to call contextDestroyed...");
+        System.out.println("l: success to call contextDestroyed...");
 
         if (connection != null){
             try {

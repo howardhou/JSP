@@ -27,8 +27,6 @@ public class AuthorityFilter implements Filter {
         String loginPage = config.getInitParameter("loginPage");
         String login = config.getInitParameter("login");
 
-        System.out.println("AuthorityFilter 开始过滤...");
-
         servletRequest.setCharacterEncoding(encoding);
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         // 获取Session
@@ -36,7 +34,7 @@ public class AuthorityFilter implements Filter {
         // 获取客户请求的页面
         String requestPath = request.getServletPath();
 
-        System.out.println("AuthorityFilter session = " + session.getAttribute("name"));
+        System.out.println("f: AuthorityFilter session = " + session.getAttribute("name"));
 
         if (session.getAttribute("name") == null && !requestPath.endsWith(loginPage) && !requestPath.endsWith(login)){
             request.setAttribute("error", "您还没有登录");

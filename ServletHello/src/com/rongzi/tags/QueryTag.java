@@ -55,7 +55,7 @@ public class QueryTag extends SimpleTagSupport{
 
     @Override
     public void doTag() throws JspException, IOException {
-        System.out.println("query tag");
+        System.out.println("t: query tag");
 
         Writer out = getJspContext().getOut();
 
