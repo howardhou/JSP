@@ -26,6 +26,10 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <listener>
+        <listener-class>com.rongzi.listener.GetDbConnListener</listener-class>
+    </listener>
+
     <servlet>
         <!--指定 Servlet 的 name, 相当于 @WebServlet 的 name 属性-->
         <servlet-name>firstservlet2</servlet-name>

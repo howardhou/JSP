@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebListener
+//@WebListener
 public class GetDbConnListener implements ServletContextListener{
 
     // 在应用启动时触发： 实现打开数据库连接
