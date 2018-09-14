@@ -19,10 +19,6 @@ import java.sql.Statement;
         @WebInitParam(name = "username", value = "root"),
         @WebInitParam(name = "password", value = "123456"),
         @WebInitParam(name = "sql", value = "SELECT * FROM user")
-//        @WebInitParam(value = "jdbc:mysql://10.40.3.16:3306/bugzilla", name = "url"),
-//        @WebInitParam(name = "username", value = "MYSQL"),
-//        @WebInitParam(name = "password", value = "sa!@#456"),
-//        @WebInitParam(name = "sql", value = "SELECT * FROM products")
 })
 */
 public class ConnDbServlet extends HttpServlet {
