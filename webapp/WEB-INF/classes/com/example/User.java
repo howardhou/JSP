@@ -1,4 +1,4 @@
-package com.rongzi;
+package com.example;
 
 //需要对 User.java 进行编译，才能对Web起作用: `javac User.java`
 public class User {

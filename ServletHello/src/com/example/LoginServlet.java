@@ -1,4 +1,4 @@
-package com.rongzi;
+package com.example;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

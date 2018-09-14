@@ -1,10 +1,9 @@
-package com.rongzi.filters;
+package com.example.filters;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.util.logging.LogRecord;
 
 @WebFilter(filterName = "log", urlPatterns = {"/*"})
 public class LogFilter implements Filter {

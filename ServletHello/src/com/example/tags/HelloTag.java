@@ -1,4 +1,4 @@
-package com.rongzi.tags;
+package com.example.tags;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.SimpleTagSupport;

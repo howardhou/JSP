@@ -1,7 +1,6 @@
-package com.rongzi;
+package com.example;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 //位于 JRE下面的 rt.jar包中，属于JDK里面的内容
 import javax.swing.*;

@@ -6,7 +6,7 @@
 
     <filter>
         <filter-name>authority</filter-name>
-        <filter-class>com.rongzi.filters.AuthorityFilter</filter-class>
+        <filter-class>com.example.filters.AuthorityFilter</filter-class>
         <init-param>
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
@@ -27,13 +27,13 @@
     </filter-mapping>
 
     <listener>
-        <listener-class>com.rongzi.listener.GetDbConnListener</listener-class>
+        <listener-class>com.example.listener.GetDbConnListener</listener-class>
     </listener>
 
     <servlet>
         <!--指定 Servlet 的 name, 相当于 @WebServlet 的 name 属性-->
         <servlet-name>firstservlet2</servlet-name>
-        <servlet-class>com.rongzi.FirstServlet</servlet-class>
+        <servlet-class>com.example.FirstServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>firstservlet2</servlet-name>
@@ -43,13 +43,13 @@
 
     <servlet>
         <servlet-name>timerservlet</servlet-name>
-        <servlet-class>com.rongzi.TimerServlet</servlet-class>
+        <servlet-class>com.example.TimerServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     
     <servlet>
         <servlet-name>connDbServlet</servlet-name>
-        <servlet-class>com.rongzi.ConnDbServlet</servlet-class>
+        <servlet-class>com.example.ConnDbServlet</servlet-class>
         <!--<init-param>-->
             <!--<param-name>driver</param-name>-->
             <!--<param-value>com.mysql.jdbc.Driver</param-value>-->

@@ -12,7 +12,7 @@
     <!-- Invoke 'Generate' action to add tags or functions -->
     <tag>
         <name>helloWorld</name>
-        <tag-class>com.rongzi.tags.HelloTag</tag-class>
+        <tag-class>com.example.tags.HelloTag</tag-class>
         <body-content>empty</body-content>
     </tag>
 
@@ -20,7 +20,7 @@
         <!--??????-->
         <name>query</name>
         <!--???????-->
-        <tag-class>com.rongzi.tags.QueryTag</tag-class>
+        <tag-class>com.example.tags.QueryTag</tag-class>
         <!--?????-->
         <body-content>empty</body-content>
         <!--??????-->
@@ -48,7 +48,7 @@
     </tag>
     <tag>
         <name>iterator</name>
-        <tag-class>com.rongzi.tags.IteratorTag</tag-class>
+        <tag-class>com.example.tags.IteratorTag</tag-class>
         <!--????????JSP??, ????HTML??????-->
         <body-content>scriptless</body-content>
         <attribute>
@@ -62,7 +62,7 @@
     </tag>
     <tag>
         <name>fragment</name>
-        <tag-class>com.rongzi.tags.FragmentTag</tag-class>
+        <tag-class>com.example.tags.FragmentTag</tag-class>
         <!--???????????-->
         <body-content>empty</body-content>
         <attribute>
@@ -73,7 +73,7 @@
     </tag>
     <tag>
         <name>dynamic</name>
-        <tag-class>com.rongzi.tags.DynamicTag</tag-class>
+        <tag-class>com.example.tags.DynamicTag</tag-class>
         <body-content>empty</body-content>
         <!--????????-->
         <dynamic-attributes>true</dynamic-attributes>

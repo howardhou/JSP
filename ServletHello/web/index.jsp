@@ -25,7 +25,7 @@
   <%
     List<String> list = new ArrayList<String>();
     list.add("疯狂Java");
-    list.add("www.rongzi.com");
+    list.add("www.example.com");
     list.add("java");
     pageContext.setAttribute("list", list);
   %>
