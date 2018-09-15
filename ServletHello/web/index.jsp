@@ -144,6 +144,17 @@
       <td>${'4' > 3}</td>
     </tr>
   </table>
+
+  <h3>表达式语言 - 内置对象</h3>
+
+  <form action="implicit-objects.jsp" method="post">
+    请输入你的姓名： <input type="text" name="name" value="${param['name']}" /> <br/>
+    <input type="submit" value="提交" />
+  </form>
+
+  <h3>使用自定义函数</h3>
+  \${mytag:reserve("Welcome you!")} : ${mytag:reserve("Welcome you!")} <br>
+  \${mytag:countChar("Welcome you!")} : ${mytag:countChar("Welcome you!")}<br>
   </body>
 
 </html>

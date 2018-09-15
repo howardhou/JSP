@@ -78,4 +78,20 @@
         <!--????????-->
         <dynamic-attributes>true</dynamic-attributes>
     </tag>
+
+    <!--2. ?????????? ????????????-->
+    <!--<tag> ???????<function> ??????-->
+    <function>
+        <!--????????-->
+        <name>reserve</name>
+        <!--?????????-->
+        <function-class>com.example.CustomFunctions</function-class>
+        <!--??????????-->
+        <function-signature>java.lang.String reserve(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>countChar</name>
+        <function-class>com.example.CustomFunctions</function-class>
+        <function-signature>int countChar(java.lang.String)</function-signature>
+    </function>
 </taglib>
