@@ -5,7 +5,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@WebFilter(filterName = "log", urlPatterns = {"/*"})
+@WebFilter(filterName = "log", urlPatterns = {"/*"}, asyncSupported = true)
 public class LogFilter implements Filter {
 
     // FilterConfig 用于访问 Filter 的配置信息
