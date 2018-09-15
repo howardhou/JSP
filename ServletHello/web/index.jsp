@@ -160,6 +160,9 @@
   <h3>使用 TagFile 自定义标签</h3>
   <% request.setAttribute("ccc", list); %>
   <tagfile:iterator bgColor="#991199" cellColor="119911" title="迭代标签" bean="list" />
+
+  <h3>上传文件</h3>
+  <a href="/uploadfile.jsp">上传文件</a>
   </body>
 
 </html>
