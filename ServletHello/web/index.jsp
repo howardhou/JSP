@@ -8,6 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="mytag" uri="http://www.rongzi.com/mytaglib" %>
+<%@ taglib prefix="tagfile" tagdir="/WEB-INF/tags" %>
 
 <html>
   <head>
@@ -155,6 +156,10 @@
   <h3>使用自定义函数</h3>
   \${mytag:reserve("Welcome you!")} : ${mytag:reserve("Welcome you!")} <br>
   \${mytag:countChar("Welcome you!")} : ${mytag:countChar("Welcome you!")}<br>
+
+  <h3>使用 TagFile 自定义标签</h3>
+  <% request.setAttribute("ccc", list); %>
+  <tagfile:iterator bgColor="#991199" cellColor="119911" title="迭代标签" bean="list" />
   </body>
 
 </html>
