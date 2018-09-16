@@ -17,13 +17,13 @@
     </tag>
 
     <tag>
-        <!--??????-->
+        <!--定义标签名称-->
         <name>query</name>
-        <!--???????-->
+        <!--定义标签处理类-->
         <tag-class>com.example.tags.QueryTag</tag-class>
-        <!--?????-->
+        <!--标签体为空-->
         <body-content>empty</body-content>
-        <!--??????-->
+        <!--配置标签属性-->
         <attribute>
             <name>driver</name>
             <required>true</required>
@@ -49,7 +49,7 @@
     <tag>
         <name>iterator</name>
         <tag-class>com.example.tags.IteratorTag</tag-class>
-        <!--????????JSP??, ????HTML??????-->
+        <!--标签体不允许出现 JSP 脚本-->
         <body-content>scriptless</body-content>
         <attribute>
             <name>collection</name>
@@ -63,7 +63,7 @@
     <tag>
         <name>fragment</name>
         <tag-class>com.example.tags.FragmentTag</tag-class>
-        <!--???????????-->
+        <!--指定该标签不支持标签体-->
         <body-content>empty</body-content>
         <attribute>
             <name>fragment</name>
@@ -75,7 +75,7 @@
         <name>dynamic</name>
         <tag-class>com.example.tags.DynamicTag</tag-class>
         <body-content>empty</body-content>
-        <!--????????-->
+        <!--支持动态属性-->
         <dynamic-attributes>true</dynamic-attributes>
     </tag>
 
