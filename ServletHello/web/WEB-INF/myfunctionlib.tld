@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myfunctionlib</short-name>
+    <uri>http://www.example.com/myfunctionlib</uri>
+
+    <!-- Invoke 'Generate' action to add tags or functions -->
+
+    <!--2. 使用标签库定义函数， 与定义标签的方法大致相似-->
+    <!--<tag> 用于定义标签，<function> 用于定义函数-->
+    <function>
+        <!--自定义函数的名称-->
+        <name>reserve</name>
+        <!--自定义函数的处理类-->
+        <function-class>com.example.CustomFunctions</function-class>
+        <!--自定义函数的实现方法-->
+        <function-signature>java.lang.String reserve(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>countChar</name>
+        <function-class>com.example.CustomFunctions</function-class>
+        <function-signature>int countChar(java.lang.String)</function-signature>
+    </function>
+</taglib>

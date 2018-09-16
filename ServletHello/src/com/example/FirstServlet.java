@@ -1,11 +1,15 @@
 package com.example;
 
+import com.example.utils.DateUtils;
+import com.example.utils.StringUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Date;
 
 //@WebServlet(name = "firstservlet", urlPatterns = "/firstservlet")
 public class FirstServlet extends HttpServlet {
@@ -35,6 +39,7 @@ public class FirstServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
 
+        out.println(DateUtils.format(new Date(), "yyyy/MM-dd")+ "<br>");
         out.println("你的姓名： " + name + "<br>");
         out.println("你的性别： " + gender + "<br>");
         out.println("你喜欢的颜色： ");

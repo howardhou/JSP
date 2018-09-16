@@ -7,7 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="mytag" uri="http://www.rongzi.com/mytaglib" %>
+<%@ taglib prefix="mytag" uri="http://www.example.com/mytaglib" %>
+<%@ taglib prefix="myfunction" uri="http://www.example.com/myfunctionlib" %>
 <%@ taglib prefix="tagfile" tagdir="/WEB-INF/tags" %>
 
 <html>
@@ -15,6 +16,10 @@
     <title>$Title$</title>
   </head>
   <body>
+
+  <h3>第一个 Servlet</h3>
+
+  <a href="/firstservlet">第一个 Servlet</a>
 
   <h3>显示自定义标签内容</h3>
   <mytag:helloWorld/><br>
@@ -154,15 +159,21 @@
   </form>
 
   <h3>使用自定义函数</h3>
-  \${mytag:reserve("Welcome you!")} : ${mytag:reserve("Welcome you!")} <br>
-  \${mytag:countChar("Welcome you!")} : ${mytag:countChar("Welcome you!")}<br>
+  \${myfunction:reserve("Welcome you!")} : ${myfunction:reserve("Welcome you!")} <br>
+  \${myfunction:countChar("Welcome you!")} : ${myfunction:countChar("Welcome you!")}<br>
 
   <h3>使用 TagFile 自定义标签</h3>
   <% request.setAttribute("ccc", list); %>
   <tagfile:iterator bgColor="#991199" cellColor="119911" title="迭代标签" bean="list" />
 
+  <h3>使用使用异步处理</h3>
+  <a href="/async">使用异步处理</a>
+
   <h3>上传文件</h3>
   <a href="/uploadfile.jsp">上传文件</a>
   </body>
 
+  <h3>使用 Web 模块 - 重构 Servlet Hello 项目</h3>
+  1. 将自定义标签相关的代码和配置迁移到 mytags 项目 - 简单的 Java 项目， Servlet Hello 项目 只需要依赖 mytags.jar 包
+  2. 新建 Java工具类项目 - utils 项目 - 简单的 Maven 项目， Servlet Hello 项目 依赖utils.jar 包
 </html>

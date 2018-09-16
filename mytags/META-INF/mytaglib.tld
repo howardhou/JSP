@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <taglib xmlns="http://java.sun.com/xml/ns/javaee"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +7,7 @@
 
     <tlib-version>1.0</tlib-version>
     <short-name>mytaglib</short-name>
-    <uri>http://www.rongzi.com/mytaglib</uri>
+    <uri>http://www.example.com/mytaglib</uri>
 
     <!-- Invoke 'Generate' action to add tags or functions -->
     <tag>
@@ -79,19 +79,4 @@
         <dynamic-attributes>true</dynamic-attributes>
     </tag>
 
-    <!--2. ?????????? ????????????-->
-    <!--<tag> ???????<function> ??????-->
-    <function>
-        <!--????????-->
-        <name>reserve</name>
-        <!--?????????-->
-        <function-class>com.example.CustomFunctions</function-class>
-        <!--??????????-->
-        <function-signature>java.lang.String reserve(java.lang.String)</function-signature>
-    </function>
-    <function>
-        <name>countChar</name>
-        <function-class>com.example.CustomFunctions</function-class>
-        <function-signature>int countChar(java.lang.String)</function-signature>
-    </function>
 </taglib>
