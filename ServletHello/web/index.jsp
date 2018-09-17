@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: dongdong
   Date: 2018/9/7
@@ -174,6 +175,19 @@
   </body>
 
   <h3>使用 Web 模块 - 重构 Servlet Hello 项目</h3>
-  1. 将自定义标签相关的代码和配置迁移到 mytags 项目 - 简单的 Java 项目， Servlet Hello 项目 只需要依赖 mytags.jar 包
+  1. 将自定义标签相关的代码和配置迁移到 mytags 项目 - 简单的 Java 项目， Servlet Hello 项目 只需要依赖 mytags.jar 包 <br>
   2. 新建 Java工具类项目 - utils 项目 - 简单的 Maven 项目， Servlet Hello 项目 依赖utils.jar 包
+
+  <h3>在线用户</h3>
+  <table border="1">
+    <%
+      Map<String,String> online = (Map<String,String>)application.getAttribute("online");
+      for (String sessionId : online.keySet()) {
+    %>
+    <tr>
+      <td><%= sessionId%></td>
+      <td><%= online.get(sessionId)%></td>
+    </tr>
+    <%}%>
+  </table>
 </html>
