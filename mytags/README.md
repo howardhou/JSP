@@ -7,6 +7,10 @@
 - 在 META-INF 目录新建 web-fragment.xml 文件
 - 将 mytaglib.tld 文件 copy 到 META-INF 目录
 
+## 上传代码到 Git
+- mytags.iml 和 .idea/modules.xml 要上传到 git 上
+- 其他 .idea 目录下的文件可以不上传
+
 ## 打包 jar
 
 - https://www.cnblogs.com/qifengshi/p/6036870.html
